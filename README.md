@@ -91,7 +91,6 @@ y casos de uso. y el dinero solo se calcula en el domain, nunca desde la interfa
 │       ├── test/             pruebas unitarias (jvm)
 │       ├── androidTest/      pruebas instrumentadas (en dispositivo)
 │       └── staging/          variante de validacion minificada
-├── docs/                     documentacion tecnica y evidencia por fase
 ├── gradle/                   wrapper y catalogo de versiones (libs.versions.toml)
 ├── build.gradle.kts          config raiz de gradle
 ├── settings.gradle.kts       modulos del proyecto
