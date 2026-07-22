@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Window/launch theme (light). App colors are driven by the Compose Material 3
+  theme; this only styles the window before Compose draws. A dark counterpart
+  lives in values-night/themes.xml.
+-->
+<resources>
+    <style name="Theme.MisFinanzas" parent="@android:style/Theme.Material.Light.NoActionBar" />
+
+    <!-- tema de arranque android 12+: icono de finanzas sobre el verde de la marca -->
+    <style name="Theme.MisFinanzas.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/ic_launcher_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.MisFinanzas</item>
+    </style>
+</resources>

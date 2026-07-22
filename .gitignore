@@ -1,0 +1,34 @@
+# Build outputs
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
+
+# Gradle / IDE
+.gradle/
+*.iml
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+local.properties
+.DS_Store
+
+# Distributable artifacts (do not track)
+*.apk
+*.aab
+
+# Signing secrets - NEVER commit these
+*.jks
+*.keystore
+debug.keystore
+keystore.properties
+signing.properties
+release-secrets.properties
+
+# R8 mapping (archive securely out-of-band, not in VCS)
+/app/release
+mapping.txt

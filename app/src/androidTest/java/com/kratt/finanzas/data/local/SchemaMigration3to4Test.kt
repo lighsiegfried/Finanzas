@@ -1,0 +1,108 @@
+package com.kratt.finanzas.data.local
+
+import android.content.Context
+import androidx.test.core.app.ApplicationProvider
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.kratt.finanzas.data.local.entity.BudgetEntity
+import com.kratt.finanzas.data.security.SqlCipherNative
+import java.io.File
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.runBlocking
+import net.zetetic.database.sqlcipher.SQLiteDatabase as CipherDatabase
+import org.junit.After
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
+import org.junit.Before
+import org.junit.Test
+import org.junit.runner.RunWith
+
+// valida la migracion 3 a 4 sobre una base cifrada real, creando la tabla de presupuestos
+@RunWith(AndroidJUnit4::class)
+class SchemaMigration3to4Test {
+
+    private val context: Context get() = ApplicationProvider.getApplicationContext()
+    private val dbName = "migv3test.db"
+    private val passphrase = ByteArray(32) { (it + 4).toByte() }
+    private val dbFile: File get() = context.getDatabasePath(dbName)
+
+    // esquema completo de la version 3, tomado de 3.json
+    private val v3Schema = listOf(
+        "CREATE TABLE IF NOT EXISTS `accounts` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `type` TEXT NOT NULL, `currencyCode` TEXT NOT NULL, `initialBalanceCents` INTEGER NOT NULL, `creditLimitCents` INTEGER, `lastFourDigits` TEXT, `description` TEXT, `isActive` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL)",
+        "CREATE TABLE IF NOT EXISTS `categories` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `transactionType` TEXT NOT NULL, `iconKey` TEXT NOT NULL, `colorKey` TEXT, `isDefault` INTEGER NOT NULL, `isActive` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL)",
+        "CREATE TABLE IF NOT EXISTS `transactions` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `accountId` INTEGER NOT NULL, `destinationAccountId` INTEGER, `categoryId` INTEGER, `type` TEXT NOT NULL, `amountCents` INTEGER NOT NULL, `description` TEXT, `transactionDate` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, `originKey` TEXT, FOREIGN KEY(`accountId`) REFERENCES `accounts`(`id`) ON UPDATE NO ACTION ON DELETE RESTRICT , FOREIGN KEY(`destinationAccountId`) REFERENCES `accounts`(`id`) ON UPDATE NO ACTION ON DELETE RESTRICT , FOREIGN KEY(`categoryId`) REFERENCES `categories`(`id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "CREATE INDEX IF NOT EXISTS `index_transactions_accountId` ON `transactions` (`accountId`)",
+        "CREATE INDEX IF NOT EXISTS `index_transactions_destinationAccountId` ON `transactions` (`destinationAccountId`)",
+        "CREATE INDEX IF NOT EXISTS `index_transactions_categoryId` ON `transactions` (`categoryId`)",
+        "CREATE INDEX IF NOT EXISTS `index_transactions_transactionDate` ON `transactions` (`transactionDate`)",
+        "CREATE TABLE IF NOT EXISTS `installment_plans` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `accountId` INTEGER NOT NULL, `categoryId` INTEGER NOT NULL, `totalAmountCents` INTEGER NOT NULL, `installmentCount` INTEGER NOT NULL, `installmentAmountCents` INTEGER NOT NULL, `firstDueDate` INTEGER NOT NULL, `frequency` TEXT NOT NULL, `paidInstallments` INTEGER NOT NULL, `status` TEXT NOT NULL, `description` TEXT, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, FOREIGN KEY(`accountId`) REFERENCES `accounts`(`id`) ON UPDATE NO ACTION ON DELETE RESTRICT , FOREIGN KEY(`categoryId`) REFERENCES `categories`(`id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "CREATE INDEX IF NOT EXISTS `index_installment_plans_accountId` ON `installment_plans` (`accountId`)",
+        "CREATE INDEX IF NOT EXISTS `index_installment_plans_categoryId` ON `installment_plans` (`categoryId`)",
+        "CREATE TABLE IF NOT EXISTS `installment_occurrences` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `installmentPlanId` INTEGER NOT NULL, `sequenceNumber` INTEGER NOT NULL, `dueDate` INTEGER NOT NULL, `amountCents` INTEGER NOT NULL, `status` TEXT NOT NULL, `paidTransactionId` INTEGER, `paidAt` INTEGER, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, FOREIGN KEY(`installmentPlanId`) REFERENCES `installment_plans`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`paidTransactionId`) REFERENCES `transactions`(`id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "CREATE UNIQUE INDEX IF NOT EXISTS `index_installment_occurrences_installmentPlanId_sequenceNumber` ON `installment_occurrences` (`installmentPlanId`, `sequenceNumber`)",
+        "CREATE INDEX IF NOT EXISTS `index_installment_occurrences_dueDate` ON `installment_occurrences` (`dueDate`)",
+        "CREATE INDEX IF NOT EXISTS `index_installment_occurrences_status` ON `installment_occurrences` (`status`)",
+        "CREATE INDEX IF NOT EXISTS `index_installment_occurrences_paidTransactionId` ON `installment_occurrences` (`paidTransactionId`)",
+        "CREATE TABLE IF NOT EXISTS `recurring_templates` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `transactionType` TEXT NOT NULL, `accountId` INTEGER NOT NULL, `categoryId` INTEGER NOT NULL, `amountCents` INTEGER NOT NULL, `recurrenceType` TEXT NOT NULL, `interval` INTEGER NOT NULL, `startDate` INTEGER NOT NULL, `endDate` INTEGER, `nextOccurrenceDate` INTEGER NOT NULL, `postingMode` TEXT NOT NULL, `isActive` INTEGER NOT NULL, `description` TEXT, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, FOREIGN KEY(`accountId`) REFERENCES `accounts`(`id`) ON UPDATE NO ACTION ON DELETE RESTRICT , FOREIGN KEY(`categoryId`) REFERENCES `categories`(`id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "CREATE INDEX IF NOT EXISTS `index_recurring_templates_accountId` ON `recurring_templates` (`accountId`)",
+        "CREATE INDEX IF NOT EXISTS `index_recurring_templates_categoryId` ON `recurring_templates` (`categoryId`)",
+        "CREATE TABLE IF NOT EXISTS `recurring_occurrences` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `recurringTemplateId` INTEGER NOT NULL, `scheduledDate` INTEGER NOT NULL, `amountCents` INTEGER NOT NULL, `status` TEXT NOT NULL, `generatedTransactionId` INTEGER, `createdAt` INTEGER NOT NULL, `updatedAt` INTEGER NOT NULL, FOREIGN KEY(`recurringTemplateId`) REFERENCES `recurring_templates`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`generatedTransactionId`) REFERENCES `transactions`(`id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "CREATE UNIQUE INDEX IF NOT EXISTS `index_recurring_occurrences_recurringTemplateId_scheduledDate` ON `recurring_occurrences` (`recurringTemplateId`, `scheduledDate`)",
+        "CREATE INDEX IF NOT EXISTS `index_recurring_occurrences_scheduledDate` ON `recurring_occurrences` (`scheduledDate`)",
+        "CREATE INDEX IF NOT EXISTS `index_recurring_occurrences_status` ON `recurring_occurrences` (`status`)",
+        "CREATE INDEX IF NOT EXISTS `index_recurring_occurrences_generatedTransactionId` ON `recurring_occurrences` (`generatedTransactionId`)",
+    )
+
+    @Before
+    fun setUp() = cleanAll()
+
+    @After
+    fun tearDown() = cleanAll()
+
+    private fun cleanAll() {
+        listOf(dbFile, File(dbFile.path + "-wal"), File(dbFile.path + "-shm"), File(dbFile.path + "-journal"))
+            .forEach { it.delete() }
+    }
+
+    private fun createV3Fixture() {
+        SqlCipherNative.ensureLoaded()
+        dbFile.parentFile?.mkdirs()
+        val db = CipherDatabase.openOrCreateDatabase(dbFile, passphrase, null, null)
+        try {
+            db.rawQuery("PRAGMA journal_mode=DELETE", null).use { it.moveToFirst() }
+            v3Schema.forEach { db.execSQL(it) }
+            db.execSQL("INSERT INTO accounts VALUES (1,'BAM','BANK_ACCOUNT','GTQ',50000,NULL,NULL,NULL,1,100,100)")
+            db.execSQL("INSERT INTO categories VALUES (1,'Alimentación','EXPENSE','food',NULL,1,1,100,100)")
+            db.execSQL("INSERT INTO transactions VALUES (1,1,NULL,1,'EXPENSE',85000,'Compra',20000,100,100,NULL)")
+            db.execSQL("PRAGMA user_version = 3")
+        } finally {
+            db.close()
+        }
+    }
+
+    @Test
+    fun migratesEncryptedV3ToV4_preservingData_andCreatingBudgets() {
+        createV3Fixture()
+
+        val room = AppDatabase.build(context, passphrase.copyOf(), dbName)
+        try {
+            runBlocking {
+                assertEquals(1, room.accountDao().observeActive().first().size)
+                assertEquals(85_000L, room.transactionDao().findById(1)!!.amountCents)
+
+                // la tabla nueva de presupuestos funciona con presupuesto por categoria y general
+                room.budgetDao().insert(
+                    BudgetEntity(year = 2026, month = 7, categoryId = 1, limitAmountCents = 120_000, warningPercentage = 80, createdAt = 1, updatedAt = 1),
+                )
+                room.budgetDao().insert(
+                    BudgetEntity(year = 2026, month = 7, categoryId = null, limitAmountCents = 600_000, warningPercentage = 80, createdAt = 1, updatedAt = 1),
+                )
+                assertEquals(2, room.budgetDao().observeForMonth(2026, 7).first().size)
+                assertNull(room.budgetDao().overallForMonth(2026, 7)!!.categoryId)
+                assertEquals(120_000L, room.budgetDao().categoryForMonth(2026, 7, 1)!!.limitAmountCents)
+            }
+        } finally {
+            room.close()
+        }
+    }
+}

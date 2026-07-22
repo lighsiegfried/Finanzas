@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Data-extraction rules for Android 12+ (API 31+).
+  Device-to-device migration can ignore allowBackup="false" in some flows, so the
+  sensitive domains are excluded explicitly from BOTH cloud backup and device transfer.
+  Absolute guarantees are not possible: OEM migration tools may not honor app rules;
+  this limitation is documented in docs/security/local-threat-model.md (T4/T5).
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="root" path="." />
+        <exclude domain="file" path="." />
+        <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="external" path="." />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="root" path="." />
+        <exclude domain="file" path="." />
+        <exclude domain="database" path="." />
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="external" path="." />
+    </device-transfer>
+</data-extraction-rules>

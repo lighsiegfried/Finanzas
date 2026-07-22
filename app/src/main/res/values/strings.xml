@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Default (es-GT) user-facing strings. The app is Spanish-first; this default file
+  holds the Spanish copy so every device locale falls back to Spanish.
+-->
+<resources>
+    <string name="app_name">Mis Finanzas</string>
+
+    <!-- Summary screen -->
+    <string name="summary_title">Resumen</string>
+    <string name="income_label">Ingresos</string>
+    <string name="expense_label">Gastos</string>
+    <string name="monthly_balance_label">Balance del mes</string>
+    <string name="recent_transactions_title">Movimientos recientes</string>
+    <string name="summary_empty_state">Aún no hay movimientos registrados</string>
+
+    <!-- Navigation / transactions screen -->
+    <string name="transactions_title">Movimientos</string>
+
+    <!-- Add transaction screen -->
+    <string name="add_transaction">Agregar movimiento</string>
+    <string name="transaction_type_expense">Gasto</string>
+    <string name="transaction_type_income">Ingreso</string>
+    <string name="amount_label">Monto</string>
+    <string name="currency_symbol">Q</string>
+    <string name="account_label">Cuenta</string>
+    <string name="category_label">Categoría</string>
+    <string name="description_label">Descripción</string>
+    <string name="date_label">Fecha</string>
+    <string name="select_date">Seleccionar fecha</string>
+    <string name="save_transaction">Guardar movimiento</string>
+    <string name="cancel_action">Cancelar</string>
+    <string name="accept_action">Aceptar</string>
+    <string name="back">Volver</string>
+
+    <!-- Validation and errors -->
+    <string name="error_invalid_amount">Ingresa un monto válido</string>
+    <string name="error_amount_too_large">El monto es demasiado grande</string>
+    <string name="error_missing_account">Selecciona una cuenta</string>
+    <string name="error_missing_category">Selecciona una categoría</string>
+    <string name="error_invalid_date">Selecciona una fecha válida</string>
+    <string name="error_save_failed">No se pudo guardar el movimiento</string>
+
+    <!-- Amount presentation -->
+    <string name="expense_amount_format">-%1$s</string>
+    <string name="income_amount_format">+%1$s</string>
+    <string name="transaction_subtitle">%1$s · %2$s</string>
+
+    <!-- Security settings -->
+    <string name="security_title">Seguridad</string>
+    <string name="app_lock_section">Bloqueo de la aplicación</string>
+    <string name="use_biometric_or_device_lock">Usar huella o bloqueo del dispositivo</string>
+    <string name="auto_lock_section">Bloquear automáticamente</string>
+    <string name="timeout_session">Por sesión</string>
+    <string name="timeout_session_supporting">Se solicitará al iniciar una nueva sesión</string>
+    <string name="timeout_ten_minutes">Después de 10 minutos</string>
+    <string name="timeout_ten_minutes_supporting">Se bloqueará después de permanecer 10 minutos fuera de la aplicación</string>
+    <string name="device_lock_unavailable">Configura un bloqueo de pantalla en tu teléfono para activar esta opción</string>
+    <string name="open_security_settings">Abrir ajustes de seguridad</string>
+
+    <!-- Lock screen and authentication -->
+    <string name="unlock_prompt_title">Desbloquear Mis Finanzas</string>
+    <string name="unlock_prompt_subtitle">Confirma tu identidad para continuar</string>
+    <string name="auth_failed_message">No se pudo verificar tu identidad</string>
+    <string name="unlock_action">Desbloquear</string>
+    <string name="continue_action">Continuar</string>
+    <string name="app_locked_icon">Aplicación bloqueada</string>
+
+    <!-- Database bootstrap and recovery -->
+    <string name="bootstrap_preparing">Protegiendo tus datos</string>
+    <string name="bootstrap_migrating">Estamos actualizando la protección de tu información</string>
+    <string name="recovery_title">No se pudo acceder a tus datos</string>
+    <string name="recovery_message">Tus datos permanecen en el dispositivo. No desinstales la aplicación.</string>
+    <string name="recovery_retry">Reintentar</string>
+    <string name="recovery_more_info">Ver información</string>
+    <string name="recovery_more_info_text">Si el problema continúa, reinicia tu teléfono e intenta de nuevo.</string>
+
+    <!-- Phase 3B: installments -->
+    <string name="installments_title">Cuotas</string>
+    <string name="new_installment_title">Nueva compra en cuotas</string>
+    <string name="edit_installment_title">Editar compra en cuotas</string>
+    <string name="installment_name_label">Nombre de la compra</string>
+    <string name="installment_account_label">Tarjeta o cuenta</string>
+    <string name="total_amount_label">Monto total</string>
+    <string name="installment_count_label">Cantidad de cuotas</string>
+    <string name="installment_amount_label">Monto por cuota</string>
+    <string name="first_due_date_label">Primera fecha de pago</string>
+    <string name="save_installment">Guardar compra en cuotas</string>
+    <string name="error_select_account">Selecciona una cuenta</string>
+    <string name="error_select_category">Selecciona una categoría</string>
+    <string name="error_invalid_count">Ingresa una cantidad válida de cuotas</string>
+    <string name="error_select_date">Selecciona una fecha válida</string>
+    <string name="mark_as_paid">Marcar como pagada</string>
+    <string name="installment_paid">Cuota pagada</string>
+    <string name="status_pending">Pendiente</string>
+    <string name="status_overdue">Vencida</string>
+    <string name="status_paid">Pagada</string>
+    <string name="status_skipped">Omitida</string>
+    <string name="remaining_balance">Saldo pendiente</string>
+    <string name="paid_installments">Cuotas pagadas</string>
+    <string name="pending_installments">Cuotas pendientes</string>
+    <string name="next_payment">Próximo pago</string>
+    <string name="ends_in">Finaliza en</string>
+    <string name="register_payment">Registrar pago</string>
+    <string name="register_payment_message">Se registrará este pago como un gasto.</string>
+    <string name="installment_filter_active">Activas</string>
+    <string name="installment_filter_completed">Completadas</string>
+    <string name="installment_filter_paused">Pausadas</string>
+    <string name="installment_filter_all">Todas</string>
+    <string name="view_schedule">Ver calendario de pagos</string>
+    <string name="edit_installment">Editar compra</string>
+    <string name="pause">Pausar</string>
+    <string name="resume">Reanudar</string>
+    <string name="cancel_installment">Cancelar compra</string>
+    <string name="installment_of_format">Cuota %1$d de %2$d</string>
+
+    <!-- Phase 3B: recurring -->
+    <string name="recurring_title">Movimientos recurrentes</string>
+    <string name="new_recurring_title">Nuevo movimiento recurrente</string>
+    <string name="edit_recurring_title">Editar movimiento recurrente</string>
+    <string name="recurring_expense">Gasto recurrente</string>
+    <string name="recurring_income">Ingreso recurrente</string>
+    <string name="frequency_label">Frecuencia</string>
+    <string name="freq_weekly">Semanal</string>
+    <string name="freq_monthly">Mensual</string>
+    <string name="freq_yearly">Anual</string>
+    <string name="every_label">Cada</string>
+    <string name="start_date_label">Fecha de inicio</string>
+    <string name="end_date_label">Fecha de finalización</string>
+    <string name="no_end_date">Sin fecha de finalización</string>
+    <string name="posting_mode_label">Registro</string>
+    <string name="posting_confirm">Confirmar antes de registrar</string>
+    <string name="posting_auto">Registrar automáticamente</string>
+    <string name="save_recurring">Guardar movimiento recurrente</string>
+    <string name="confirm_action">Confirmar</string>
+    <string name="skip_action">Omitir</string>
+
+    <!-- Phase 3B: upcoming payments -->
+    <string name="upcoming_payments_title">Próximos pagos</string>
+    <string name="month_commitments">Compromisos del mes</string>
+    <string name="due_today">Vence hoy</string>
+    <string name="due_tomorrow">Vence mañana</string>
+    <string name="due_on_format">Vence el %s</string>
+    <string name="overdue_label">Atrasado</string>
+    <string name="view_all">Ver todos</string>
+
+    <!-- Phase 3B: reminders (settings) -->
+    <string name="reminders_title">Recordatorios</string>
+    <string name="remind_upcoming">Avisarme de próximos pagos</string>
+    <string name="days_before_label">Días antes</string>
+    <string name="days_same">El mismo día</string>
+    <string name="days_1">1 día antes</string>
+    <string name="days_3">3 días antes</string>
+    <string name="days_7">7 días antes</string>
+    <string name="reminders_disabled">Los recordatorios están desactivados</string>
+    <string name="enable_notifications_hint">Activa las notificaciones para recibir recordatorios</string>
+    <string name="reminder_time_title">Hora de los recordatorios</string>
+    <string name="select_time">Seleccionar hora</string>
+    <string name="reminder_time_supporting">Los recordatorios pueden mostrarse cerca de la hora seleccionada</string>
+    <string name="save_time">Guardar hora</string>
+
+    <!-- Phase 3C: budgets -->
+    <string name="budgets_title">Presupuestos</string>
+    <string name="budget_overall">Presupuesto mensual</string>
+    <string name="budget_category">Presupuesto por categoría</string>
+    <string name="new_budget">Nuevo presupuesto</string>
+    <string name="edit_budget">Editar presupuesto</string>
+    <string name="limit_amount_label">Monto límite</string>
+    <string name="warning_at_label">Avisarme al alcanzar</string>
+    <string name="save_budget">Guardar presupuesto</string>
+    <string name="no_budget">Sin presupuesto</string>
+    <string name="add_budget">Agregar presupuesto</string>
+    <string name="error_duplicate_budget">Ya existe un presupuesto para esta categoría y mes</string>
+    <string name="budget_state_warning">Por alcanzar el límite</string>
+    <string name="budget_state_exceeded">Presupuesto superado</string>
+    <string name="spent_label">Gastado</string>
+    <string name="remaining_label">Restante</string>
+    <string name="limit_label">Límite</string>
+    <string name="budget_summary">Resumen del presupuesto</string>
+    <string name="actual_expenses">Gastos reales</string>
+    <string name="pending_commitments">Compromisos pendientes</string>
+    <string name="budget_available">Presupuesto disponible</string>
+    <string name="categories_without_budget">Categorías sin presupuesto</string>
+    <string name="warning_near_limit">Estás cerca del límite de tu presupuesto</string>
+    <string name="warning_category_exceeded">Superaste el presupuesto de esta categoría</string>
+    <string name="warning_overall_exceeded">Superaste tu presupuesto mensual</string>
+
+    <!-- Phase 3C: reports -->
+    <string name="reports_title">Reportes</string>
+    <string name="report_income_expense">Ingresos y gastos</string>
+    <string name="report_by_category">Gastos por categoría</string>
+    <string name="report_by_account">Gastos por cuenta</string>
+    <string name="report_trend">Tendencia mensual</string>
+    <string name="report_account_summary">Resumen de cuentas</string>
+    <string name="report_credit_debt">Deuda de tarjetas</string>
+    <string name="report_installment_commitments">Compromisos de cuotas</string>
+    <string name="report_recurring">Gastos recurrentes</string>
+    <string name="report_budget_performance">Cumplimiento de presupuestos</string>
+    <string name="report_comparison">Comparación mensual</string>
+    <string name="period_label">Periodo</string>
+    <string name="period_this_month">Este mes</string>
+    <string name="period_last_month">Mes anterior</string>
+    <string name="period_last_3">Últimos 3 meses</string>
+    <string name="period_last_6">Últimos 6 meses</string>
+    <string name="period_this_year">Este año</string>
+    <string name="period_custom">Rango personalizado</string>
+    <string name="from_label">Desde</string>
+    <string name="to_label">Hasta</string>
+    <string name="apply_filters">Aplicar filtros</string>
+    <string name="comparison_title">Comparación con el mes anterior</string>
+    <string name="increased">Aumentó</string>
+    <string name="decreased">Disminuyó</string>
+    <string name="no_change">Sin cambios</string>
+    <string name="no_previous_data">No hay datos del mes anterior</string>
+    <string name="chart_empty">No hay suficientes datos para mostrar esta gráfica</string>
+    <string name="export_report">Exportar reporte</string>
+    <string name="export_csv">Exportar como CSV</string>
+    <string name="report_exported">Reporte exportado</string>
+    <string name="export_error_report">No se pudo exportar el reporte</string>
+    <string name="report_total">Total</string>
+    <string name="report_percentage">Porcentaje</string>
+    <string name="report_movements">Movimientos</string>
+    <string name="account_opening">Saldo inicial</string>
+    <string name="account_closing">Saldo final</string>
+
+    <!-- Phase 3B: reminders (notifications) -->
+    <string name="reminder_channel_name">Recordatorios de pagos</string>
+    <string name="notification_reminder_title">Pago próximo</string>
+    <string name="notification_reminder_content">Tienes un pago pendiente próximamente</string>
+
+    <!-- Phase 3A: essential finance management -->
+    <string name="transfer_label">Transferencia</string>
+    <string name="transfer_subtitle_format">%1$s → %2$s</string>
+
+    <!-- Settings hub -->
+    <string name="settings_title">Ajustes</string>
+    <string name="open_settings">Abrir ajustes</string>
+
+    <!-- Appearance / personalization (Phase 5A) -->
+    <string name="appearance_title">Apariencia</string>
+    <string name="theme_section">Tema de la aplicación</string>
+    <string name="theme_system">Usar configuración del sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+    <string name="dynamic_color_section">Usar colores del dispositivo</string>
+    <string name="dynamic_color_note">Disponible en Android 12 o superior</string>
+    <string name="density_section">Densidad</string>
+    <string name="density_comfortable">Cómoda</string>
+    <string name="density_compact">Compacta</string>
+    <string name="density_comfortable_note">Muestra más espacio y detalles</string>
+    <string name="density_compact_note">Muestra más información en pantalla</string>
+    <string name="report_view_section">Vista de reportes</string>
+    <string name="report_view_chart">Gráfica</string>
+    <string name="report_view_list">Lista</string>
+    <string name="report_view_both">Ambas</string>
+    <string name="hide_balances">Ocultar saldos</string>
+    <string name="show_balances">Mostrar saldos</string>
+    <string name="balances_hidden">Saldos ocultos</string>
+    <string name="customize_summary">Personalizar resumen</string>
+    <string name="show_action">Mostrar</string>
+    <string name="hide_action">Ocultar</string>
+    <string name="move_up">Mover arriba</string>
+    <string name="move_down">Mover abajo</string>
+    <string name="reset_layout">Restablecer diseño</string>
+    <string name="reset_summary_title">Restablecer resumen</string>
+    <string name="reset_summary_message">Se restaurará el orden original de las secciones.</string>
+    <string name="reset_action">Restablecer</string>
+
+    <!-- Settings section headings (Phase 5A) -->
+    <string name="section_appearance">Apariencia</string>
+    <string name="section_personalization">Personalización</string>
+    <string name="section_privacy_security">Privacidad y seguridad</string>
+    <string name="section_data">Datos</string>
+    <string name="section_notifications">Notificaciones</string>
+    <string name="section_information">Información</string>
+    <string name="section_finances">Finanzas</string>
+
+    <!-- Dashboard module names (Phase 5A) -->
+    <string name="module_quick_actions">Acciones rápidas</string>
+    <string name="module_upcoming">Próximos pagos</string>
+    <string name="module_recent">Movimientos recientes</string>
+
+    <!-- About and privacy (Phase 4C) -->
+    <string name="about_title">Acerca de</string>
+    <string name="about_version">Versión %1$s</string>
+    <string name="about_build_type">Compilación: %1$s</string>
+    <string name="about_validation_warning">Versión de validación</string>
+    <string name="about_local_only">Tus datos se guardan únicamente en este dispositivo.</string>
+    <string name="about_no_internet">La aplicación no requiere conexión a internet.</string>
+    <string name="privacy_title">Privacidad</string>
+    <string name="open_source_licenses">Licencias de código abierto</string>
+    <string name="privacy_local">Tu información financiera se guarda de forma local en este dispositivo.</string>
+    <string name="privacy_encrypted">La base de datos está cifrada.</string>
+    <string name="privacy_no_bank">La aplicación no se conecta a cuentas bancarias.</string>
+    <string name="privacy_no_upload">La aplicación no sube tus datos de forma automática.</string>
+    <string name="privacy_manual_backup">Los respaldos se crean manualmente.</string>
+    <string name="privacy_user_destination">Tú eliges dónde se guardan los archivos de respaldo.</string>
+    <string name="privacy_cloud_choice">Elegir un proveedor de documentos con respaldo en la nube es tu decisión.</string>
+    <string name="privacy_uninstall">Desinstalar la aplicación puede eliminar los datos locales.</string>
+    <string name="privacy_lost_password">Si pierdes la contraseña del respaldo, ese respaldo no se podrá recuperar.</string>
+    <string name="privacy_device_compromise">Si el dispositivo está comprometido, las protecciones locales pueden reducirse.</string>
+    <string name="licenses_title">Licencias de código abierto</string>
+    <string name="licenses_intro">Esta aplicación usa componentes de código abierto con las siguientes licencias:</string>
+
+    <!-- Branding (Phase 4D) -->
+    <string name="splash_subtitle">Control personal de tus finanzas</string>
+    <string name="powered_by">Powered by Wilson Vasquez</string>
+
+    <!-- Onboarding (Phase 4D) -->
+    <string name="onboarding_welcome_title">Bienvenido a Mis Finanzas</string>
+    <string name="onboarding_welcome_body">Aquí podrás registrar tus ingresos, gastos, cuotas, presupuestos y reportes de forma local y privada.</string>
+    <string name="onboarding_local_data">Tus datos se guardan en este dispositivo.</string>
+    <string name="onboarding_start">Comenzar</string>
+    <string name="onboarding_skip">Omitir por ahora</string>
+    <string name="onboarding_continue">Continuar</string>
+    <string name="onboarding_finish">Finalizar</string>
+    <string name="onboarding_configure_subtitle">Configura tu app para comenzar</string>
+    <string name="onboarding_accounts_title">Crea tus primeras cuentas</string>
+    <string name="onboarding_accounts_body">Agrega al menos una cuenta para comenzar.</string>
+    <string name="onboarding_categories_title">Revisa tus categorías</string>
+    <string name="onboarding_categories_body">Puedes usar las categorías predeterminadas o agregar nuevas.</string>
+    <string name="onboarding_recurring_title">Configura tus movimientos recurrentes</string>
+    <string name="onboarding_recurring_body">Por ejemplo: salario, internet, renta o colegiatura.</string>
+    <string name="onboarding_budget_title">Crea tu primer presupuesto</string>
+    <string name="onboarding_budget_body">Puedes definir un presupuesto mensual general o por categoría.</string>
+    <string name="onboarding_security_title">Protege tu información</string>
+    <string name="onboarding_security_body">Puedes activar huella o bloqueo del dispositivo.</string>
+    <string name="onboarding_configure_security">Configurar seguridad</string>
+    <string name="onboarding_backup_title">Crea tu primer respaldo</string>
+    <string name="onboarding_backup_body">Te recomendamos crear un respaldo cifrado antes de usar la app con frecuencia.</string>
+    <string name="onboarding_finish_setup">Finalizar configuración</string>
+    <string name="onboarding_import_title">Importar datos (opcional)</string>
+    <string name="onboarding_import_body">Si ya tienes movimientos en un archivo CSV, puedes importarlos.</string>
+
+    <!-- CSV import (Phase 4D) -->
+    <string name="import_title">Importar datos</string>
+    <string name="import_explanation">Importa movimientos desde un archivo CSV preparado con el formato de la aplicación.</string>
+    <string name="select_csv">Seleccionar archivo CSV</string>
+    <string name="download_template">Descargar plantilla</string>
+    <string name="view_format">Ver formato esperado</string>
+    <string name="import_action">Importar</string>
+    <string name="import_format_title">Formato esperado</string>
+    <string name="import_format_body">Columnas: tipo, fecha, descripcion, monto, cuenta, categoria, cuenta_destino.\ntipo: gasto, ingreso o transferencia.\nfecha: AAAA-MM-DD. monto: mayor a 0 con punto decimal.\ncuenta y categoria deben coincidir con las existentes.\nEn transferencia usa cuenta_destino (diferente de cuenta) y deja categoria vacía.</string>
+    <string name="import_preview_title">Vista previa de importación</string>
+    <string name="valid_rows">Filas válidas</string>
+    <string name="error_rows">Filas con error</string>
+    <string name="possible_duplicates">Posibles duplicados</string>
+    <string name="duplicates_detected_title">Se detectaron posibles duplicados</string>
+    <string name="import_anyway">Importar de todas formas</string>
+    <string name="skip_duplicates">Omitir duplicados</string>
+    <string name="backup_before_import">Crear respaldo antes de importar</string>
+    <string name="backup_before_import_message">Te recomendamos crear un respaldo antes de continuar.</string>
+    <string name="continue_without_backup">Continuar sin respaldo</string>
+    <string name="backup_create_failed">No se pudo crear el respaldo</string>
+    <string name="import_completed">Importación completada</string>
+    <string name="imported_movements">Movimientos importados</string>
+    <string name="skipped_rows">Filas omitidas</string>
+    <string name="duplicates_detected_label">Duplicados detectados</string>
+    <string name="view_detail">Ver detalle</string>
+    <string name="import_cancelled">Importación cancelada</string>
+    <string name="import_failed">No se pudo completar la importación</string>
+    <string name="import_row_format">Fila %1$d: %2$s</string>
+    <!-- import row/file errors -->
+    <string name="error_missing_column">Falta una columna requerida</string>
+    <string name="error_file_empty">El archivo está vacío o no tiene filas</string>
+    <string name="error_file_too_large">El archivo es demasiado grande</string>
+    <string name="error_invalid_type">Tipo de movimiento no válido</string>
+    <string name="error_invalid_date_import">Fecha no válida</string>
+    <string name="error_invalid_amount_import">Monto no válido</string>
+    <string name="error_account_not_found">La cuenta no existe</string>
+    <string name="error_missing_category_import">Falta la categoría</string>
+    <string name="error_category_not_found">La categoría no existe</string>
+    <string name="error_destination_not_found">La cuenta de destino no existe</string>
+    <string name="error_accounts_differ">Las cuentas deben ser diferentes</string>
+    <string name="error_malformed_row">Fila con formato incorrecto</string>
+
+    <!-- Accounts -->
+    <string name="accounts_title">Cuentas</string>
+    <string name="add_account">Agregar cuenta</string>
+    <string name="new_account_title">Nueva cuenta</string>
+    <string name="edit_account_title">Editar cuenta</string>
+    <string name="name_label">Nombre</string>
+    <string name="account_type_label">Tipo de cuenta</string>
+    <string name="initial_balance_label">Saldo inicial</string>
+    <string name="credit_limit_label">Límite de crédito</string>
+    <string name="last_four_label">Últimos cuatro dígitos</string>
+    <string name="save_account">Guardar cuenta</string>
+    <string name="deactivate_account">Desactivar cuenta</string>
+    <string name="reactivate_account">Reactivar cuenta</string>
+    <string name="error_empty_name">Ingresa un nombre</string>
+    <string name="error_duplicate_account">Ya existe una cuenta con este nombre</string>
+    <string name="error_invalid_last_four">Ingresa únicamente los últimos cuatro dígitos</string>
+    <string name="deactivate_account_message">Los movimientos anteriores se conservarán.</string>
+    <string name="deactivate_action">Desactivar</string>
+    <string name="balance_current">Saldo actual</string>
+    <string name="balance_initial">Saldo inicial</string>
+    <string name="balance_available">Disponible</string>
+    <string name="balance_debt">Deuda actual</string>
+    <string name="no_credit_limit">Sin límite configurado</string>
+    <string name="account_inactive_tag">Inactiva</string>
+
+    <!-- Account types -->
+    <string name="account_type_cash">Efectivo</string>
+    <string name="account_type_bank">Cuenta bancaria</string>
+    <string name="account_type_credit">Tarjeta de crédito</string>
+    <string name="account_type_savings">Ahorro</string>
+    <string name="account_type_household">Hogar</string>
+    <string name="account_type_wallet">Billetera digital</string>
+    <string name="account_type_other">Otra</string>
+
+    <!-- Categories -->
+    <string name="categories_title">Categorías</string>
+    <string name="categories_expense">Categorías de gastos</string>
+    <string name="categories_income">Categorías de ingresos</string>
+    <string name="new_category_title">Nueva categoría</string>
+    <string name="edit_category_title">Editar categoría</string>
+    <string name="type_label">Tipo</string>
+    <string name="icon_label">Ícono</string>
+    <string name="save_category">Guardar categoría</string>
+    <string name="deactivate_category">Desactivar categoría</string>
+    <string name="reactivate_category">Reactivar categoría</string>
+    <string name="error_duplicate_category">Ya existe una categoría con este nombre</string>
+    <string name="error_category_type_locked">No puedes cambiar el tipo de una categoría que ya tiene movimientos.</string>
+    <string name="category_inactive_tag">Inactiva</string>
+
+    <!-- Icons -->
+    <string name="icon_general">General</string>
+    <string name="icon_food">Alimentación</string>
+    <string name="icon_transport">Transporte</string>
+    <string name="icon_home">Hogar</string>
+    <string name="icon_health">Salud</string>
+    <string name="icon_shopping">Compras</string>
+    <string name="icon_work">Trabajo</string>
+
+    <!-- Transfer form -->
+    <string name="transfer_source_label">Cuenta de origen</string>
+    <string name="transfer_destination_label">Cuenta de destino</string>
+    <string name="save_transfer">Guardar transferencia</string>
+    <string name="error_missing_source">Selecciona una cuenta de origen</string>
+    <string name="error_missing_destination">Selecciona una cuenta de destino</string>
+    <string name="error_same_account">Las cuentas deben ser diferentes</string>
+
+    <!-- Movement detail and editing -->
+    <string name="movement_detail_title">Detalle del movimiento</string>
+    <string name="edit_movement_title">Editar movimiento</string>
+    <string name="edit_action">Editar</string>
+    <string name="save_changes">Guardar cambios</string>
+    <string name="discard_changes">Descartar cambios</string>
+    <string name="error_save_changes">No se pudieron guardar los cambios</string>
+    <string name="discard_changes_message">Los cambios realizados no se guardarán.</string>
+    <string name="discard_action">Descartar</string>
+    <string name="keep_editing">Continuar editando</string>
+
+    <!-- Delete movement -->
+    <string name="delete_movement">Eliminar movimiento</string>
+    <string name="delete_movement_message">Esta acción eliminará el movimiento y actualizará los saldos.</string>
+    <string name="delete_action">Eliminar</string>
+    <string name="error_delete_movement">No se pudo eliminar el movimiento</string>
+    <string name="error_delete_generated_movement">Este movimiento se generó automáticamente. Revierte el pago desde su origen.</string>
+    <string name="generated_movement_hint">Este movimiento se generó automáticamente. Para eliminarlo, revierte el pago desde la cuota o el movimiento recurrente que lo originó.</string>
+
+    <!-- Recurring reversal (Phase 4A) -->
+    <string name="revert_movement">Revertir movimiento</string>
+    <string name="revert_recurring_title">Revertir movimiento recurrente</string>
+    <string name="revert_recurring_message">Se eliminará el movimiento generado y el pago volverá a quedar pendiente.</string>
+    <string name="revert_action">Revertir</string>
+    <string name="error_revert_movement">No se pudo revertir el movimiento</string>
+
+    <!-- Month navigation -->
+    <string name="month_previous">Mes anterior</string>
+    <string name="month_next">Mes siguiente</string>
+    <string name="month_current">Volver al mes actual</string>
+
+    <!-- Search and filters -->
+    <string name="search_movements">Buscar movimientos</string>
+    <string name="filter_all">Todos</string>
+    <string name="filter_expenses">Gastos</string>
+    <string name="filter_incomes">Ingresos</string>
+    <string name="filter_transfers">Transferencias</string>
+    <string name="filter_account">Cuenta</string>
+    <string name="filter_category">Categoría</string>
+    <string name="clear_filters">Limpiar filtros</string>
+    <string name="no_results">Sin resultados</string>
+
+    <!-- Portable encrypted backup (Phase 2C) -->
+    <string name="backup_title">Respaldo de datos</string>
+    <string name="backup_explanation">El respaldo se guarda donde tú elijas y está protegido con una contraseña.</string>
+    <string name="backup_last">Último respaldo</string>
+    <string name="backup_never">Nunca</string>
+    <string name="backup_created_on">Respaldo creado el %1$s</string>
+    <string name="backup_create">Crear respaldo</string>
+    <string name="backup_restore">Restaurar respaldo</string>
+    <string name="backup_password_label">Contraseña del respaldo</string>
+    <string name="confirm_password_label">Confirmar contraseña</string>
+    <string name="show_password">Mostrar contraseña</string>
+    <string name="password_mismatch">Las contraseñas no coinciden</string>
+    <string name="password_too_short">Usa una contraseña de al menos 12 caracteres</string>
+    <string name="error_empty_password">Ingresa una contraseña</string>
+    <string name="wrong_password">La contraseña no es correcta o el respaldo está dañado</string>
+    <string name="backup_password_warning">Guarda esta contraseña en un lugar seguro. Sin ella no podrás restaurar el respaldo.</string>
+    <string name="export_confirm_title">Crear respaldo cifrado</string>
+    <string name="restore_confirm_title">Restaurar respaldo</string>
+    <string name="restore_confirm_message">Los datos actuales serán reemplazados después de validar el respaldo.</string>
+    <string name="restore_confirm_action">Restaurar</string>
+    <string name="backup_preparing">Preparando respaldo</string>
+    <string name="backup_protecting">Protegiendo el archivo</string>
+    <string name="backup_validating">Validando el respaldo</string>
+    <string name="backup_created_title">Respaldo creado</string>
+    <string name="backup_created_message">Tu respaldo cifrado se guardó correctamente</string>
+    <string name="export_error">No se pudo crear el respaldo</string>
+    <string name="provider_write_error">No se pudo escribir en la ubicación seleccionada</string>
+    <string name="restore_completed_title">Restauración completada</string>
+    <string name="restore_completed_message">Tus datos se restauraron correctamente</string>
+    <string name="restore_warning">La restauración reemplazará las cuentas, categorías y movimientos actuales.</string>
+    <string name="forgotten_password_warning">Si olvidas la contraseña, el respaldo no se podrá recuperar.</string>
+
+    <!-- Personalized visual experience (Phase 5A) -->
+    <!-- Dashboard module labels -->
+    <string name="module_account_balances">Saldos de cuentas</string>
+    <string name="module_budget_progress">Progreso de presupuesto</string>
+    <string name="module_expense_categories">Gastos por categoría</string>
+    <string name="module_monthly_trend">Tendencia mensual</string>
+    <string name="module_credit_card_debt">Deuda de tarjetas</string>
+    <string name="module_savings_balance">Ahorros</string>
+
+    <!-- Dashboard section titles -->
+    <string name="quick_actions_title">Acciones rápidas</string>
+    <string name="account_balances_title">Saldos de cuentas</string>
+    <string name="budget_progress_title">Progreso de presupuesto</string>
+    <string name="expense_categories_title">Gastos por categoría</string>
+    <string name="monthly_trend_title">Tendencia mensual</string>
+    <string name="credit_card_debt_title">Deuda de tarjetas</string>
+    <string name="savings_title">Ahorros</string>
+    <string name="savings_total">Total en ahorros</string>
+    <string name="module_empty">Sin datos para mostrar</string>
+    <string name="and_more_format">y %1$d más</string>
+
+    <!-- Quick action labels -->
+    <string name="customize_quick_actions">Acciones rápidas</string>
+    <string name="quick_actions_hint">Elige hasta cinco acciones para el resumen</string>
+    <string name="quick_actions_limit_reached">Solo puedes elegir cinco acciones</string>
+    <string name="qa_add_expense">Agregar gasto</string>
+    <string name="qa_add_income">Agregar ingreso</string>
+    <string name="qa_transfer">Transferir</string>
+    <string name="qa_register_payment">Registrar pago</string>
+    <string name="qa_view_movements">Ver movimientos</string>
+    <string name="qa_add_account">Agregar cuenta</string>
+    <string name="qa_create_budget">Crear presupuesto</string>
+    <string name="qa_add_installment">Agregar cuota</string>
+    <string name="qa_add_recurring">Agregar recurrente</string>
+    <string name="qa_create_backup">Crear respaldo</string>
+    <string name="cd_quick_action">Acción rápida: %1$s</string>
+
+    <!-- Report view modes and interactive charts -->
+    <string name="report_view_mode">Vista del reporte</string>
+    <string name="view_movements">Ver movimientos</string>
+    <string name="chart_select_hint">Toca un elemento para ver su detalle</string>
+    <string name="chart_detail_title">Detalle</string>
+    <string name="chart_no_selection">Selecciona un elemento de la gráfica</string>
+    <string name="chart_percentage_format">%1$d%%</string>
+    <string name="chart_point_content_description">%1$s: %2$s</string>
+    <string name="chart_share_of_total">%1$d%% del total</string>
+
+    <!-- Period selector -->
+    <string name="period_selector_title">Periodo</string>
+    <string name="period_reset">Restablecer</string>
+    <string name="period_selected_format">Periodo: %1$s</string>
+
+    <!-- Standardized states -->
+    <string name="state_loading">Cargando información</string>
+    <string name="state_empty">No hay información disponible</string>
+    <string name="state_error">No se pudo cargar la información</string>
+    <string name="retry">Reintentar</string>
+    <string name="saving_changes">Guardando cambios</string>
+    <string name="changes_saved">Cambios guardados</string>
+
+    <!-- Success confirmations -->
+    <string name="movement_saved">Movimiento guardado</string>
+    <string name="movement_deleted">Movimiento eliminado</string>
+    <string name="payment_registered">Pago registrado</string>
+    <string name="backup_created">Respaldo creado</string>
+    <string name="data_restored">Datos restaurados</string>
+
+    <!-- Haptics -->
+    <string name="haptics_title">Vibración al confirmar</string>
+    <string name="haptics_note">Añade una vibración breve al guardar o confirmar</string>
+
+    <!-- Privacy display -->
+    <string name="balances_hidden_label">Saldos ocultos</string>
+
+    <!-- Accessibility / adaptive navigation -->
+    <string name="pane_navigation">Navegación</string>
+    <string name="pane_detail">Detalle</string>
+    <string name="reorder_module">Reordenar sección</string>
+    <string name="module_visibility_state">%1$s, %2$s</string>
+    <string name="visible_state">visible</string>
+    <string name="hidden_state">oculto</string>
+
+    <!-- Transaction templates (Phase 5B) -->
+    <string name="templates_title">Plantillas</string>
+    <string name="template_new">Nueva plantilla</string>
+    <string name="template_edit">Editar plantilla</string>
+    <string name="template_name_label">Nombre de la plantilla</string>
+    <string name="template_type_label">Tipo de movimiento</string>
+    <string name="template_default_amount">Monto predeterminado</string>
+    <string name="template_account">Cuenta</string>
+    <string name="template_source_account">Cuenta de origen</string>
+    <string name="template_destination_account">Cuenta de destino</string>
+    <string name="template_category">Categoría</string>
+    <string name="template_description">Descripción</string>
+    <string name="template_save">Guardar plantilla</string>
+    <string name="template_use">Usar plantilla</string>
+    <string name="template_mark_favorite">Marcar como favorita</string>
+    <string name="template_deactivate">Desactivar plantilla</string>
+    <string name="template_reactivate">Reactivar plantilla</string>
+    <string name="template_favorites">Favoritas</string>
+    <string name="template_recent">Usadas recientemente</string>
+    <string name="template_all">Todas las plantillas</string>
+    <string name="template_no_favorites">Sin plantillas favoritas</string>
+    <string name="template_empty">Aún no tienes plantillas</string>
+    <string name="template_inactive_notice">Esta plantilla usa una cuenta o categoría inactiva. Revísala antes de usarla.</string>
+    <string name="settings_templates">Administrar plantillas</string>
+    <string name="error_template_name">Ingresa un nombre</string>
+    <string name="error_template_account">Selecciona una cuenta</string>
+    <string name="error_template_category">Selecciona una categoría</string>
+    <string name="error_template_same_accounts">Las cuentas deben ser diferentes</string>
+    <string name="error_template_amount">El monto predeterminado no es válido</string>
+    <string name="error_template_duplicate">Ya existe una plantilla con este nombre</string>
+
+    <!-- Widgets (Phase 5B) -->
+    <string name="widgets_title">Widgets</string>
+    <string name="widget_show_amounts">Mostrar montos en widgets</string>
+    <string name="widget_show_amounts_note">Los montos pueden ser visibles desde la pantalla principal del teléfono.</string>
+    <string name="widget_show_amounts_confirm_title">Mostrar información financiera</string>
+    <string name="widget_show_amounts_confirm_message">Los montos podrán verse en los widgets del teléfono.</string>
+    <string name="widget_show_amounts_confirm_action">Mostrar montos</string>
+    <string name="widget_update">Actualizar widgets</string>
+    <string name="widget_quick_actions_title">Acciones de Mis Finanzas</string>
+    <string name="widget_summary_title">Resumen financiero</string>
+    <string name="widget_upcoming_title">Próximos pagos</string>
+    <string name="widget_open_app_to_update">Abre la aplicación para actualizar</string>
+    <string name="widget_no_movements">Sin movimientos este mes</string>
+    <string name="widget_payment_upcoming">Tienes un pago próximo</string>
+    <string name="widget_payments_pending_format">Tienes %1$d pagos pendientes</string>
+    <string name="widget_payment_overdue">Tienes un pago atrasado</string>
+    <string name="widget_no_upcoming">Sin pagos próximos</string>
+
+    <!-- Fast flow success messages (Phase 5B) -->
+    <string name="saved_expense">Gasto guardado</string>
+    <string name="saved_income">Ingreso guardado</string>
+    <string name="saved_transfer">Transferencia guardada</string>
+
+    <!-- Savings goals (Phase 5C) -->
+    <string name="goals_title">Metas de ahorro</string>
+    <string name="goal_new">Nueva meta</string>
+    <string name="goal_edit">Editar meta</string>
+    <string name="goal_name_label">Nombre de la meta</string>
+    <string name="goal_target_label">Monto objetivo</string>
+    <string name="goal_target_date">Fecha objetivo</string>
+    <string name="goal_no_target_date">Sin fecha objetivo</string>
+    <string name="goal_linked_account">Cuenta asociada</string>
+    <string name="goal_description">Descripción</string>
+    <string name="goal_save">Guardar meta</string>
+    <string name="goal_pause">Pausar meta</string>
+    <string name="goal_resume">Reanudar meta</string>
+    <string name="goal_complete">Completar meta</string>
+    <string name="goal_archive">Archivar meta</string>
+    <string name="goal_no_account_note">El progreso se registrará dentro de la aplicación y no moverá dinero entre cuentas.</string>
+    <string name="goal_create">Crear meta</string>
+    <string name="goal_empty">Aún no tienes metas de ahorro</string>
+    <string name="goal_tab_active">Activas</string>
+    <string name="goal_tab_completed">Completadas</string>
+    <string name="goal_tab_paused">Pausadas</string>
+    <string name="goal_tab_archived">Archivadas</string>
+    <string name="goal_tab_all">Todas</string>
+    <string name="error_goal_name">Ingresa un nombre</string>
+    <string name="error_goal_target">Ingresa un monto objetivo válido</string>
+    <string name="error_goal_target_date">La fecha objetivo debe ser posterior a la fecha inicial</string>
+
+    <!-- Goal progress (Phase 5C) -->
+    <string name="goal_saved">Ahorrado</string>
+    <string name="goal_remaining">Falta</string>
+    <string name="goal_progress">Progreso</string>
+    <string name="goal_suggested_monthly">Aporte mensual sugerido</string>
+    <string name="goal_estimated_date">Fecha estimada</string>
+    <string name="goal_completed">Meta completada</string>
+    <string name="goal_surplus">Excedente</string>
+    <string name="goal_no_target_date_hint">Agrega una fecha objetivo para calcular un aporte mensual sugerido.</string>
+    <string name="goal_progress_description">%1$s de %2$s, %3$d%%</string>
+    <string name="goal_status_cancelled">Cancelada</string>
+    <string name="goal_no_linked_account_option">Sin cuenta asociada</string>
+    <string name="contribution_type_manual">Registro manual</string>
+    <string name="contribution_type_transfer">Transferencia</string>
+    <string name="contribution_type_adjustment">Ajuste</string>
+
+    <!-- Contributions (Phase 5C) -->
+    <string name="contribution_add">Agregar aporte</string>
+    <string name="contribution_history">Historial de aportes</string>
+    <string name="contribution_amount">Monto del aporte</string>
+    <string name="contribution_date">Fecha</string>
+    <string name="contribution_source_account">Cuenta de origen</string>
+    <string name="contribution_manual">Registrar solo en la meta</string>
+    <string name="contribution_transfer">Transferir a una cuenta de ahorro</string>
+    <string name="contribution_note">Nota</string>
+    <string name="contribution_save">Guardar aporte</string>
+    <string name="contribution_revert">Revertir aporte</string>
+    <string name="contribution_revert_message">Se revertirá el aporte y el movimiento asociado.</string>
+    <string name="contribution_empty">Sin aportes registrados</string>
+    <string name="error_contribution_amount">Ingresa un monto válido</string>
+    <string name="error_contribution_account">Selecciona una cuenta</string>
+    <string name="error_contribution_no_linked_account">La meta no tiene una cuenta asociada</string>
+
+    <!-- Planned purchases (Phase 5C) -->
+    <string name="purchases_title">Compras planificadas</string>
+    <string name="purchase_new">Nueva compra planificada</string>
+    <string name="purchase_edit">Editar compra planificada</string>
+    <string name="purchase_name">Nombre de la compra</string>
+    <string name="purchase_cost">Costo estimado</string>
+    <string name="purchase_category">Categoría</string>
+    <string name="purchase_goal">Meta de ahorro</string>
+    <string name="purchase_target_date">Fecha estimada</string>
+    <string name="purchase_priority">Prioridad</string>
+    <string name="priority_low">Baja</string>
+    <string name="priority_medium">Media</string>
+    <string name="priority_high">Alta</string>
+    <string name="purchase_description">Descripción</string>
+    <string name="purchase_vendor">Proveedor</string>
+    <string name="purchase_save">Guardar compra</string>
+    <string name="purchase_empty">Aún no tienes compras planificadas</string>
+    <string name="purchase_no_goal">Sin meta asociada</string>
+    <string name="error_purchase_name">Ingresa un nombre</string>
+    <string name="error_purchase_cost">Ingresa un costo estimado válido</string>
+    <string name="error_purchase_date">Selecciona una fecha válida</string>
+    <string name="error_purchase_goal_linked">Esa meta ya tiene una compra activa</string>
+
+    <!-- Purchase readiness (Phase 5C) -->
+    <string name="purchase_not_funded">Aún falta ahorrar</string>
+    <string name="purchase_partial">Ahorro suficiente</string>
+    <string name="purchase_ready">Lista para comprar</string>
+    <string name="purchase_completed">Compra completada</string>
+    <string name="purchase_status_planning">Planeando</string>
+    <string name="purchase_status_saving">Ahorrando</string>
+    <string name="purchase_status_ready">Lista</string>
+    <string name="purchase_status_purchased">Comprada</string>
+    <string name="purchase_status_cancelled">Cancelada</string>
+    <string name="purchase_status_archived">Archivada</string>
+    <string name="purchase_status_label">Estado</string>
+    <string name="purchase_available_saved">Ahorrado disponible</string>
+    <string name="purchase_remaining_to_save">Falta ahorrar</string>
+
+    <!-- Register / reverse purchase (Phase 5C) -->
+    <string name="purchase_register">Registrar compra</string>
+    <string name="purchase_final_amount">Monto final</string>
+    <string name="purchase_registered">Compra registrada</string>
+    <string name="error_purchase_register">No se pudo registrar la compra</string>
+    <string name="purchase_reverse">Revertir compra</string>
+    <string name="purchase_reverse_message">Se eliminará el movimiento generado y la compra volverá a estar pendiente.</string>
+
+    <!-- Goal / purchase dashboard + reports (Phase 5C) -->
+    <string name="module_savings_goals">Metas de ahorro</string>
+    <string name="module_planned_purchases">Compras planificadas</string>
+    <string name="closest_goal">Meta más cercana</string>
+    <string name="next_purchase">Próxima compra</string>
+    <string name="see_all">Ver todas</string>
+    <string name="future_planned_purchases">Compras futuras planificadas</string>
+    <string name="report_savings_progress">Progreso de ahorro</string>
+    <string name="report_contributions_by_month">Aportes por mes</string>
+    <string name="report_active_goals">Metas activas</string>
+    <string name="report_completed_goals">Metas completadas</string>
+    <string name="report_planned_purchases">Compras planificadas</string>
+    <string name="report_planned_by_priority">Monto planificado por prioridad</string>
+
+    <!-- Reminders (Phase 5C) -->
+    <string name="reminder_goal">Recordarme esta meta</string>
+    <string name="reminder_purchase">Recordarme esta compra</string>
+    <string name="reminder_contribution">Recordatorio de aporte</string>
+    <string name="reminder_monthly">Avisarme cada mes</string>
+    <string name="reminder_before_target">Avisarme antes de la fecha objetivo</string>
+    <string name="reminder_goal_title">Meta de ahorro</string>
+    <string name="reminder_goal_content">Revisa el avance de una de tus metas</string>
+    <string name="reminder_purchase_title">Compra planificada</string>
+    <string name="reminder_purchase_content">Se acerca la fecha de una compra planificada</string>
+
+    <!-- Settings (Phase 5C) -->
+    <string name="settings_goals">Metas de ahorro</string>
+    <string name="settings_purchases">Compras planificadas</string>
+
+    <!-- Planning CSV import/export (Phase 5C) -->
+    <string name="settings_planning_csv">Metas y compras (CSV)</string>
+    <string name="planning_csv_title">Metas y compras (CSV)</string>
+    <string name="planning_export_goals">Exportar metas</string>
+    <string name="planning_export_purchases">Exportar compras</string>
+    <string name="planning_import">Importar archivo</string>
+    <string name="planning_import_note">Importa metas o compras desde un archivo CSV. No crea movimientos automáticamente.</string>
+    <string name="planning_import_summary">%1$d válidas, %2$d con error, %3$d duplicadas</string>
+    <string name="planning_import_confirm">Importar %1$d</string>
+    <string name="planning_import_done">%1$d elementos importados</string>
+    <string name="planning_import_invalid">Archivo no válido</string>
+    <string name="planning_import_none">No hay filas válidas para importar</string>
+    <string name="planning_export_done">Exportación completada</string>
+
+    <!-- Application shortcuts (Phase 5B) -->
+    <string name="shortcut_add_expense">Agregar gasto</string>
+    <string name="shortcut_add_income">Agregar ingreso</string>
+    <string name="shortcut_transfer">Transferir</string>
+    <string name="shortcut_upcoming">Ver próximos pagos</string>
+    <string name="shortcut_goals">Ver metas</string>
+
+    <!-- Encrypted receipts and document attachments (Phase 5D) -->
+    <string name="attachments_section_title">Comprobantes y documentos</string>
+    <string name="attachments_title">Adjuntos</string>
+    <string name="attachment_add">Agregar comprobante</string>
+    <string name="attachment_take_photo">Tomar foto</string>
+    <string name="attachment_pick_file">Seleccionar archivo</string>
+    <string name="attachment_view">Ver adjuntos</string>
+    <string name="attachments_empty">Aún no hay comprobantes adjuntos</string>
+    <plurals name="attachment_count">
+        <item quantity="one">%1$d adjunto</item>
+        <item quantity="other">%1$d adjuntos</item>
+    </plurals>
+    <string name="attachment_label_receipt">Comprobante</string>
+    <string name="attachment_label_document">Documento</string>
+    <string name="attachment_open">Abrir</string>
+    <string name="attachment_preview">Vista previa</string>
+    <string name="attachment_delete">Eliminar adjunto</string>
+    <string name="attachment_delete_message">Esta acción eliminará el archivo adjunto de este movimiento.</string>
+    <string name="attachment_close">Cerrar</string>
+    <string name="attachment_added">Comprobante adjuntado</string>
+    <string name="attachment_deleted">Adjunto eliminado</string>
+    <string name="attachment_importing">Adjuntando archivo</string>
+    <string name="attachment_camera_unavailable">No se pudo abrir la cámara</string>
+    <string name="error_attachment_unsupported">Tipo de archivo no compatible</string>
+    <string name="error_attachment_too_large">El archivo es demasiado grande</string>
+    <string name="error_attachment_unreadable">No se pudo leer el archivo seleccionado</string>
+    <string name="error_attachment_no_space">No hay suficiente espacio disponible</string>
+    <string name="error_attachment_generic">No se pudo adjuntar el archivo</string>
+    <string name="attachment_preview_unavailable">No se pudo mostrar la vista previa</string>
+    <string name="attachments_settings_title">Adjuntos</string>
+    <string name="attachments_include_in_backup">Incluir adjuntos en el respaldo</string>
+    <string name="attachments_include_in_backup_hint">Esto puede aumentar el tamaño del archivo</string>
+    <string name="attachments_storage_title">Espacio usado por adjuntos</string>
+    <string name="attachments_storage_total">Tamaño total</string>
+    <string name="attachments_storage_count">Cantidad de archivos</string>
+    <string name="attachments_manage">Administrar adjuntos</string>
+    <string name="attachments_storage_warning">Los adjuntos grandes pueden aumentar el tamaño del respaldo.</string>
+    <string name="attachments_ocr_enabled">Leer comprobantes localmente</string>
+    <string name="attachments_ocr_enabled_hint">Permite detectar datos del comprobante en el dispositivo, sin conexión</string>
+    <string name="ocr_read_receipt">Leer comprobante</string>
+    <string name="ocr_detected_fields">Datos detectados</string>
+    <string name="ocr_apply_suggestion">Aplicar sugerencia</string>
+    <string name="ocr_review_before_saving">Revisar antes de guardar</string>
+    <string name="ocr_no_data">No se detectaron datos suficientes</string>
+    <string name="ocr_reading">Leyendo comprobante</string>
+    <string name="ocr_field_merchant">Comercio</string>
+    <string name="ocr_field_date">Fecha</string>
+    <string name="ocr_field_total">Total</string>
+    <string name="ocr_field_invoice">Número de factura</string>
+    <string name="ocr_field_category">Categoría sugerida</string>
+    <string name="cd_attachment_thumbnail">Miniatura del comprobante</string>
+    <string name="cd_attachment_document">Documento adjunto</string>
+    <string name="attachment_backup_included">Incluidos en el respaldo</string>
+    <string name="attachment_backup_only_records">Solo se respaldan los registros financieros</string>
+
+    <!-- Asistente financiero local (fase 6a) -->
+    <string name="assistant_title">Asistente</string>
+    <string name="assistant_home_title">Pregunta sobre tus finanzas</string>
+    <string name="assistant_input_hint">Escribe una pregunta</string>
+    <string name="assistant_send">Enviar</string>
+    <string name="assistant_suggestions_title">Sugerencias</string>
+    <string name="assistant_how_calculated">Cómo se calculó</string>
+    <string name="assistant_view_movements">Ver movimientos</string>
+    <string name="assistant_open_accounts">Ver cuentas</string>
+    <string name="assistant_open_installments">Ver cuotas</string>
+    <string name="assistant_open_budgets">Ver presupuestos</string>
+    <string name="assistant_open_goals">Ver metas</string>
+    <string name="assistant_open_purchases">Ver compras</string>
+    <string name="assistant_clear">Borrar conversación</string>
+    <string name="assistant_privacy_note">Tus preguntas se procesan en este dispositivo</string>
+    <string name="assistant_review_movement">Revisar movimiento</string>
+    <string name="assistant_capability_title">Sobre el asistente</string>
+    <string name="assistant_estimate">Estimación</string>
+
+    <string name="assistant_mode_local">Asistente local</string>
+    <string name="assistant_mode_compatible">Modo compatible</string>
+    <string name="assistant_mode_advanced_available">Modo avanzado disponible</string>
+    <string name="assistant_mode_advanced_unavailable">El modo avanzado no está disponible en este dispositivo</string>
+    <string name="assistant_still_works">El asistente seguirá funcionando con consultas compatibles</string>
+
+    <string name="assistant_preparing">Preparando asistente</string>
+    <string name="assistant_analyzing">Analizando tus datos</string>
+    <string name="assistant_taking_long">La consulta está tardando más de lo esperado</string>
+    <string name="assistant_use_compatible">Usar modo compatible</string>
+    <string name="assistant_cancel">Cancelar</string>
+
+    <string name="assistant_answer_summary">En %1$s tus ingresos fueron %2$s, tus gastos %3$s y tu balance %4$s.</string>
+    <string name="assistant_answer_category_focus">En %1$s gastaste %2$s en %3$s, distribuidos en %4$d movimientos.</string>
+    <string name="assistant_answer_category_focus_none">En %1$s no registraste gastos en %2$s.</string>
+    <string name="assistant_answer_category_top">En %1$s tu mayor gasto fue %2$s con %3$s.</string>
+    <string name="assistant_answer_no_expenses">En %1$s no registraste gastos.</string>
+    <string name="assistant_answer_account_top">En %1$s la cuenta con más gasto fue %2$s con %3$s.</string>
+    <string name="assistant_answer_account_focus">En %1$s gastaste %2$s en %3$s, en %4$d movimientos.</string>
+    <string name="assistant_answer_balances_total">El saldo total de tus cuentas es %1$s.</string>
+    <string name="assistant_line_name_value">%1$s: %2$s</string>
+    <string name="assistant_answer_debt_line">Debes %1$s en %2$s.</string>
+    <string name="assistant_answer_debt_available">Disponible: %1$s.</string>
+    <string name="assistant_answer_comparison">Comparado con %1$s, en %2$s tus gastos %3$s.</string>
+    <string name="assistant_change_up">subieron %1$s (%2$d%%)</string>
+    <string name="assistant_change_down">bajaron %1$s (%2$d%%)</string>
+    <string name="assistant_change_up_no_prev">subieron %1$s</string>
+    <string name="assistant_change_down_no_prev">bajaron %1$s</string>
+    <string name="assistant_change_same">no cambiaron</string>
+    <string name="assistant_answer_available">Después de restar %1$s en gastos registrados y %2$s en compromisos pendientes a tus ingresos de %3$s, el disponible estimado es %4$s.</string>
+    <string name="assistant_answer_upcoming">En %1$s tienes %2$d pagos próximos por %3$s.</string>
+    <string name="assistant_answer_upcoming_overdue">%1$d de ellos ya están vencidos.</string>
+    <string name="assistant_answer_installment_line">En %1$s te faltan %2$s (%3$d cuotas pendientes).</string>
+    <string name="assistant_answer_installment_finish">Terminas de pagar alrededor del %1$s.</string>
+    <string name="assistant_answer_budget_overall">Tu presupuesto general: gastaste %1$s de %2$s (%3$s).</string>
+    <string name="assistant_answer_budget_line">%1$s: %2$s de %3$s (%4$s).</string>
+    <string name="assistant_budget_state_available">disponible</string>
+    <string name="assistant_budget_state_warning">cerca del límite</string>
+    <string name="assistant_budget_state_exceeded">excedido</string>
+    <string name="assistant_answer_goal_line">En %1$s llevas %2$s de %3$s (%4$d%%).</string>
+    <string name="assistant_answer_goal_remaining">Falta %1$s.</string>
+    <string name="assistant_answer_goal_suggested">Aporte mensual sugerido: %1$s.</string>
+    <string name="assistant_answer_goal_complete">Meta completada.</string>
+    <string name="assistant_answer_purchase_line">%1$s: %2$s.</string>
+    <string name="assistant_answer_purchase_remaining">Falta ahorrar %1$s.</string>
+    <string name="assistant_readiness_not_funded">aún falta ahorrar</string>
+    <string name="assistant_readiness_partial">ahorro parcial</string>
+    <string name="assistant_readiness_ready">lista para comprar</string>
+    <string name="assistant_readiness_purchased">compra completada</string>
+    <string name="assistant_answer_search_found">Encontré %1$d movimientos por un total de %2$s.</string>
+    <string name="assistant_answer_search_none">No encontré movimientos con esos criterios.</string>
+    <string name="assistant_answer_duplicates">Encontré %1$d grupos de movimientos que parecen repetidos.</string>
+    <string name="assistant_answer_duplicate_line">%1$s en %2$s, %3$d veces.</string>
+    <string name="assistant_answer_draft">Preparé un %1$s de %2$s. Revisa los datos antes de guardarlo.</string>
+    <string name="assistant_draft_type_expense">gasto</string>
+    <string name="assistant_draft_type_income">ingreso</string>
+
+    <string name="assistant_clarify_period">¿De qué mes quieres saber?</string>
+    <string name="assistant_clarify_account">¿A cuál cuenta te refieres?</string>
+    <string name="assistant_clarify_category">¿A cuál categoría te refieres?</string>
+    <string name="assistant_clarify_goal">¿A cuál meta te refieres?</string>
+    <string name="assistant_clarify_purchase">¿A cuál compra te refieres?</string>
+    <string name="assistant_clarify_search">¿Qué quieres buscar?</string>
+
+    <string name="assistant_no_accounts">Aún no tienes cuentas registradas.</string>
+    <string name="assistant_no_installments">No tienes cuotas activas.</string>
+    <string name="assistant_no_budgets">No tienes presupuestos configurados este mes.</string>
+    <string name="assistant_no_goals">No tienes metas de ahorro activas.</string>
+    <string name="assistant_no_purchases">No tienes compras planificadas.</string>
+    <string name="assistant_no_upcoming">No tienes pagos próximos.</string>
+    <string name="assistant_no_credit_cards">No tienes tarjetas de crédito.</string>
+    <string name="assistant_no_duplicates">No encontré movimientos que parezcan repetidos.</string>
+    <string name="assistant_no_search_results">No encontré movimientos con esos criterios.</string>
+
+    <string name="assistant_amount_too_large">El monto es demasiado grande.</string>
+    <string name="assistant_unsupported">Todavía no puedo responder esa pregunta. Puedo ayudarte con tus gastos, presupuestos, cuotas y metas de ahorro.</string>
+    <string name="assistant_help">Puedo responder preguntas sobre tus finanzas. Prueba con una de las sugerencias.</string>
+    <string name="assistant_error">No se pudo completar la operación.</string>
+
+    <string name="assistant_calc_period">Periodo: %1$s.</string>
+    <string name="assistant_calc_expense_posted">Se usan solo los gastos registrados.</string>
+    <string name="assistant_calc_transfers_excluded">Las transferencias no cuentan como ingreso ni gasto.</string>
+    <string name="assistant_calc_available">Disponible estimado = ingresos − gastos registrados − compromisos pendientes.</string>
+    <string name="assistant_calc_budget">Gastado = gastos registrados del mes; no incluye compromisos pendientes.</string>
+    <string name="assistant_calc_goal">Avance = suma de tus aportes registrados.</string>
+
+    <string name="assistant_suggestion_1">¿Cuánto gasté este mes?</string>
+    <string name="assistant_suggestion_2">¿En qué categoría gasté más?</string>
+    <string name="assistant_suggestion_3">¿Cuánto me queda después de mis pagos pendientes?</string>
+    <string name="assistant_suggestion_4">¿Qué cuotas tengo antes de fin de mes?</string>
+    <string name="assistant_suggestion_5">¿Cómo va mi presupuesto?</string>
+    <string name="assistant_suggestion_6">¿Cuánto falta para mi meta?</string>
+    <string name="assistant_suggestion_7">¿Cómo cambió mi gasto en los últimos tres meses?</string>
+    <string name="assistant_suggestion_8">¿Qué movimientos parecen repetidos?</string>
+
+    <string name="assistant_period_last_months">los últimos %1$d meses</string>
+    <string name="assistant_period_year">el año %1$d</string>
+    <string name="assistant_period_month">%1$s de %2$d</string>
+
+    <string-array name="assistant_months">
+        <item>enero</item>
+        <item>febrero</item>
+        <item>marzo</item>
+        <item>abril</item>
+        <item>mayo</item>
+        <item>junio</item>
+        <item>julio</item>
+        <item>agosto</item>
+        <item>septiembre</item>
+        <item>octubre</item>
+        <item>noviembre</item>
+        <item>diciembre</item>
+    </string-array>
+
+    <!-- Continuidad de datos y actualizaciones seguras (fase 6b) -->
+    <string name="update_success_title">Actualización completada</string>
+    <string name="update_success_message">Todos tus datos se conservaron correctamente</string>
+    <string name="update_success_ok">Entendido</string>
+    <string name="update_failure_title">No se pudo completar la actualización</string>
+    <string name="update_failure_message">Tus datos permanecen en el dispositivo. No desinstales la aplicación.</string>
+    <string name="update_retry">Reintentar</string>
+    <string name="update_create_diagnostic">Crear copia de diagnóstico</string>
+    <string name="update_view_help">Ver ayuda</string>
+    <string name="update_help_text">Vuelve a intentar la verificación. Si el problema continúa, crea una copia de diagnóstico (un respaldo cifrado) para conservar tu información. No desinstales la aplicación mientras tanto.</string>
+
+    <!-- Centro de protección de datos (fase 6b) -->
+    <string name="data_protection_title">Protección de datos</string>
+    <string name="dp_status_title">Estado de tus datos</string>
+    <string name="dp_db_ready">Base de datos lista</string>
+    <string name="dp_db_not_ready">Preparando la base de datos</string>
+    <string name="dp_encryption">Cifrado: SQLCipher activo</string>
+    <string name="dp_schema_version">Versión de datos: %1$d</string>
+    <string name="dp_backup_format">Formato de respaldo: v%1$d</string>
+    <string name="dp_last_backup">Último respaldo: %1$s</string>
+    <string name="dp_backup_age_days">Hace %1$d días</string>
+    <string name="dp_backup_age_today">Hoy</string>
+    <string name="dp_backup_exists_yes">Tienes un respaldo portable</string>
+    <string name="dp_backup_exists_no">No tienes un respaldo portable</string>
+    <string name="dp_update_status_ok">La última actualización conservó tus datos</string>
+    <string name="dp_update_status_none">Tus datos están al día</string>
+    <string name="dp_action_create">Crear respaldo ahora</string>
+    <string name="dp_action_migrate">Migrar a otro teléfono</string>
+    <string name="dp_action_restore">Restaurar respaldo</string>
+    <string name="dp_action_instructions">Ver instrucciones</string>
+    <string name="dp_action_verify">Verificar respaldo</string>
+    <string name="dp_verify_title">Verificar respaldo</string>
+    <string name="dp_verify_password_hint">Contraseña del respaldo</string>
+    <string name="dp_verify_confirm">Verificar</string>
+    <string name="dp_verify_valid">El respaldo es válido</string>
+    <string name="dp_verify_invalid">No se pudo validar el respaldo. Revisa la contraseña o el archivo.</string>
+    <string name="dp_verify_unsupported">Este respaldo no es compatible con esta versión.</string>
+    <string name="backup_stale_warning">Tu respaldo tiene más de 30 días</string>
+    <string name="backup_stale_action">Actualizar respaldo</string>
+    <string name="no_backup_warning_title">Aún no tienes un respaldo portable</string>
+    <string name="no_backup_warning_message">Si desinstalas la aplicación o pierdes el teléfono, no podrás recuperar tus datos sin un respaldo.</string>
+
+    <!-- Educación de desinstalación y borrado de datos (fase 6b) -->
+    <string name="education_title">Antes de desinstalar</string>
+    <string name="education_uninstall">Si desinstalas la aplicación, se eliminarán los datos guardados únicamente en este dispositivo.</string>
+    <string name="education_backup_first">Antes de desinstalar, crea un respaldo para poder recuperar tu información.</string>
+    <string name="education_create_backup">Crear respaldo antes de desinstalar</string>
+    <string name="education_diff_title">Qué hace cada acción</string>
+    <string name="education_diff_update">Actualizar: conserva todos tus datos.</string>
+    <string name="education_diff_restore">Restaurar: reemplaza los datos actuales con los de un respaldo, después de validarlo.</string>
+    <string name="education_diff_uninstall">Desinstalar: elimina los datos locales de este dispositivo.</string>
+    <string name="education_diff_clear_data">Borrar almacenamiento: elimina la información local; la app queda como recién instalada.</string>
+    <string name="education_diff_clear_cache">Borrar caché: no elimina tu base de datos financiera.</string>
+
+    <!-- Migrar a otro teléfono (fase 6b) -->
+    <string name="migrate_title">Migrar a otro teléfono</string>
+    <string name="migrate_intro">Para pasar tus datos a otro teléfono necesitas un respaldo portable cifrado.</string>
+    <string name="migrate_step_create">1. Crea un respaldo portable en este teléfono.</string>
+    <string name="migrate_step_password">2. Recuerda la contraseña del respaldo; la necesitarás en el otro teléfono.</string>
+    <string name="migrate_step_move">3. Mueve el archivo al otro teléfono por el medio que prefieras.</string>
+    <string name="migrate_step_install">4. En el otro teléfono instala Mis Finanzas.</string>
+    <string name="migrate_step_restore">5. Abre \"Restaurar respaldo\", elige el archivo e ingresa la contraseña.</string>
+    <string name="migrate_step_verify">6. La app valida el respaldo antes de reemplazar y crea una clave local en el teléfono destino.</string>
+    <string name="migrate_no_server">Tus datos no se transfieren por internet; tú mueves el archivo.</string>
+    <string name="migrate_password_warning">Si olvidas la contraseña no podrás abrir el respaldo.</string>
+    <string name="migrate_create_action">Crear respaldo para migrar</string>
+</resources>

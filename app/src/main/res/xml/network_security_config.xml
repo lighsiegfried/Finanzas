@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Defense in depth: the app has no INTERNET permission at all, but cleartext traffic
+  is additionally disabled so that no future dependency can silently use it.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>
