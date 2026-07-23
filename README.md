@@ -182,9 +182,3 @@ comandos utiles:
 
 hay tres buildtypes: `debug` (para desarrollar), `staging` (build minificado de validacion, con
 sufijo `.staging` y firmado de debug) y `release` (con r8, recursos reducidos y no depurable).
-
-## La carpeta docs
-
-en `docs/` esta toda la documentacion tecnica del proyecto: modelo de amenazas y politicas de
-seguridad, definiciones financieras, reglas de release, contrato de continuidad de datos, reportes
-y evidencia de las pruebas por fase. es buen lugar para entender el "por que" de cada decision.
